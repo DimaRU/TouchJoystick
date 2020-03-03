@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16082.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestDraw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2ke-01-PhT" customClass="TouchJoystickView" customModule="TestDraw" customModuleProvider="target">
+                                <rect key="frame" x="139" y="220" width="310" height="310"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tilt Down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-bG-Rax">
+                                        <rect key="frame" x="117" y="4.5" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tilt up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1k-7K-b0n">
+                                        <rect key="frame" x="130" y="284.5" width="50.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF4-gM-FYI">
+                                        <rect key="frame" x="-1" y="144.5" width="32" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-rh-Gz6">
+                                        <rect key="frame" x="273.5" y="144.5" width="43" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="k1k-7K-b0n" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" id="9a0-ZO-AJd"/>
+                                    <constraint firstItem="GF4-gM-FYI" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" id="Lj1-uv-MwV"/>
+                                    <constraint firstItem="JOz-rh-Gz6" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" constant="140" id="M0C-Gw-ynE"/>
+                                    <constraint firstItem="tR8-bG-Rax" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" constant="-140" id="O1Q-GV-Cmv"/>
+                                    <constraint firstAttribute="width" secondItem="2ke-01-PhT" secondAttribute="height" multiplier="1:1" id="SBY-Cr-a2a"/>
+                                    <constraint firstItem="k1k-7K-b0n" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" constant="140" id="Vnw-6r-MDT"/>
+                                    <constraint firstItem="GF4-gM-FYI" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" constant="-140" id="fuZ-ey-V2K"/>
+                                    <constraint firstAttribute="height" constant="310" id="jXt-7k-rLG"/>
+                                    <constraint firstItem="JOz-rh-Gz6" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" id="nTL-OG-ft7"/>
+                                    <constraint firstItem="tR8-bG-Rax" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" id="vew-G6-BLC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stickFraction">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="stickColor">
+                                        <color key="value" white="1" alpha="0.90151434075342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="joystickSize">
+                                        <size key="value" width="200" height="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-LZ-okH" customClass="TouchJoystickView" customModule="TestDraw" customModuleProvider="target">
+                                <rect key="frame" x="70" y="220" width="65" height="310"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forward" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX9-wz-19g">
+                                        <rect key="frame" x="-0.5" y="14.5" width="66" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-jQ-f1l">
+                                        <rect key="frame" x="13" y="284.5" width="39.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="0Ua-n0-yoz"/>
+                                    <constraint firstItem="AX9-wz-19g" firstAttribute="centerX" secondItem="VNF-LZ-okH" secondAttribute="centerX" id="2n5-Ly-pZq"/>
+                                    <constraint firstItem="2tl-jQ-f1l" firstAttribute="centerX" secondItem="VNF-LZ-okH" secondAttribute="centerX" id="VaP-bk-BHp"/>
+                                    <constraint firstItem="2tl-jQ-f1l" firstAttribute="centerY" secondItem="VNF-LZ-okH" secondAttribute="centerY" constant="140" id="dTm-TX-tim"/>
+                                    <constraint firstAttribute="height" constant="310" id="hqm-Ff-etU"/>
+                                    <constraint firstItem="AX9-wz-19g" firstAttribute="centerY" secondItem="VNF-LZ-okH" secondAttribute="centerY" constant="-130" id="n8v-Gc-zlW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stickFraction">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="stickColor">
+                                        <color key="value" white="1" alpha="0.89624357876849303" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="joystickSize">
+                                        <size key="value" width="65" height="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hdN-Io-gHj" customClass="TouchJoystickView" customModule="TestDraw" customModuleProvider="target">
+                                <rect key="frame" x="525" y="70" width="200" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Jeh-j3-IY1"/>
+                                    <constraint firstAttribute="width" secondItem="hdN-Io-gHj" secondAttribute="height" multiplier="200:65" id="diO-k8-O8a"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stickFraction">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="stickColor">
+                                        <color key="value" white="1" alpha="0.89937392979589026" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="12" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="joystickSize">
+                                        <size key="value" width="200" height="65"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hdN-Io-gHj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" placeholder="YES" id="1i1-02-t2E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2ke-01-PhT" secondAttribute="bottom" constant="70" placeholder="YES" id="AQb-B6-ont"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VNF-LZ-okH" secondAttribute="bottom" constant="70" placeholder="YES" id="P87-Hb-1sf"/>
+                            <constraint firstItem="VNF-LZ-okH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" placeholder="YES" id="afa-md-wOE"/>
+                            <constraint firstItem="hdN-Io-gHj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="525" placeholder="YES" id="noc-Y2-UB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ke-01-PhT" secondAttribute="trailing" constant="151" placeholder="YES" id="sEf-HB-R48"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="horizontalJoystock" destination="hdN-Io-gHj" id="lUp-X7-oUt"/>
+                        <outlet property="throttleJoystick" destination="VNF-LZ-okH" id="aE7-zG-GgV"/>
+                        <outlet property="yawJoystock" destination="2ke-01-PhT" id="KHv-DK-I7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+    </scenes>
+</document>

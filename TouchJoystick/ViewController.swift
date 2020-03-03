@@ -14,9 +14,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let joystiks = [throttleJoystick, yawJoystock, horizontalJoystock]
-        joystiks.forEach{ $0?.isHidden = true; $0?.delegate = self }
+        joystiks.forEach{ $0?.isHidden = false; $0?.delegate = self }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        throttleJoystick.frame.origin = CGPoint(x: 120, y: 80)
+        yawJoystock.frame.origin = CGPoint(x: 400, y: 80)
+        horizontalJoystock.frame.origin = CGPoint(x: 600, y: 20)
+    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {

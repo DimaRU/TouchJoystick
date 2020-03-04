@@ -66,8 +66,8 @@ class TouchJoystickView: UIView, DisabledLayout {
         stickPosition = CGPoint(x: joystickBounds.midX, y: joystickBounds.midY)
     }
     
-    override func didMoveToWindow() {
-        guard window != nil else { return }
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setup()
     }
     

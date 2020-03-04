@@ -14,6 +14,7 @@
 		0A730FFC240E91DA004C0F28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A730FFB240E91DA004C0F28 /* Assets.xcassets */; };
 		0A730FFF240E91DA004C0F28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A730FFD240E91DA004C0F28 /* LaunchScreen.storyboard */; };
 		0A731007240E9220004C0F28 /* TouchJoystickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A731006240E9220004C0F28 /* TouchJoystickView.swift */; };
+		0AC07D3F240FDD76001A85BE /* DisabledLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC07D3E240FDD76001A85BE /* DisabledLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		0A731000240E91DA004C0F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A731006240E9220004C0F28 /* TouchJoystickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchJoystickView.swift; sourceTree = "<group>"; };
 		0A731008240E9282004C0F28 /* TouchJoystick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TouchJoystick.entitlements; sourceTree = "<group>"; };
+		0AC07D3E240FDD76001A85BE /* DisabledLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisabledLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				0A730FF6240E91D9004C0F28 /* ViewController.swift */,
+				0AC07D3E240FDD76001A85BE /* DisabledLayout.swift */,
 				0A731006240E9220004C0F28 /* TouchJoystickView.swift */,
 				0A730FF2240E91D9004C0F28 /* AppDelegate.swift */,
 				0A730FF4240E91D9004C0F28 /* SceneDelegate.swift */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A731007240E9220004C0F28 /* TouchJoystickView.swift in Sources */,
+				0AC07D3F240FDD76001A85BE /* DisabledLayout.swift in Sources */,
 				0A730FF7240E91D9004C0F28 /* ViewController.swift in Sources */,
 				0A730FF3240E91D9004C0F28 /* AppDelegate.swift in Sources */,
 				0A730FF5240E91D9004C0F28 /* SceneDelegate.swift in Sources */,

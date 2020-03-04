@@ -11,12 +11,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var yawJoystock: TouchJoystickView!
     @IBOutlet weak var horizontalJoystock: TouchJoystickView!
 
+    private var savedCenter: [UIView: CGPoint] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let joystiks = [throttleJoystick, yawJoystock, horizontalJoystock]
         joystiks.forEach{ $0?.isHidden = false; $0?.delegate = self }
     }
 
+    override func viewWillLayoutSubviews() {
+        for view in view.subviews where view is DisabledLayout {
+            savedCenter[view] = view.center
+        }
+        super.viewWillLayoutSubviews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        for (view, center) in savedCenter {
+            view.center = center
+        }
+        savedCenter = [:]
+    }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -27,6 +45,7 @@ class ViewController: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
+            guard touch.view == view || touch.view is TouchJoystickView else { continue }
             let location = touch.location(in: view)
             if location.y < view.bounds.midY {
                 horizontalJoystock.touchBegan(touch: touch)

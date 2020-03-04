@@ -15,6 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIn-Zg-Lyc" userLabel="VideoView">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcT-OY-11D" userLabel="SideView">
+                                <rect key="frame" x="796" y="314" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="wAS-1u-4LQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="zJI-wQ-qau"/>
+                                </constraints>
+                            </view>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2ke-01-PhT" customClass="TouchJoystickView" customModule="TouchJoystick" customModuleProvider="target">
                                 <rect key="frame" x="412" y="94" width="290" height="290"/>
                                 <subviews>
@@ -180,9 +192,15 @@
                         <constraints>
                             <constraint firstItem="hdN-Io-gHj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" placeholder="YES" id="1i1-02-t2E"/>
                             <constraint firstAttribute="bottom" secondItem="2ke-01-PhT" secondAttribute="bottom" constant="30" placeholder="YES" id="AQb-B6-ont"/>
+                            <constraint firstItem="mIn-Zg-Lyc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cv2-kx-ISS"/>
                             <constraint firstAttribute="bottom" secondItem="VNF-LZ-okH" secondAttribute="bottom" constant="30" placeholder="YES" id="P87-Hb-1sf"/>
                             <constraint firstItem="VNF-LZ-okH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" placeholder="YES" id="afa-md-wOE"/>
-                            <constraint firstItem="hdN-Io-gHj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="550" placeholder="YES" id="noc-Y2-UB2"/>
+                            <constraint firstAttribute="bottom" secondItem="mIn-Zg-Lyc" secondAttribute="bottom" id="eHG-gX-jHu"/>
+                            <constraint firstAttribute="bottom" secondItem="TcT-OY-11D" secondAttribute="bottom" id="iD9-Yc-pRv"/>
+                            <constraint firstItem="mIn-Zg-Lyc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iGb-Za-4Ty"/>
+                            <constraint firstAttribute="trailing" secondItem="mIn-Zg-Lyc" secondAttribute="trailing" id="lAO-nV-mNp"/>
+                            <constraint firstItem="hdN-Io-gHj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="594" placeholder="YES" id="noc-Y2-UB2"/>
+                            <constraint firstAttribute="trailing" secondItem="TcT-OY-11D" secondAttribute="trailing" id="pZF-Mf-kPe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ke-01-PhT" secondAttribute="trailing" constant="150" placeholder="YES" id="sEf-HB-R48"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -195,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.8671875" y="93.75"/>
+            <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
         </scene>
     </scenes>
 </document>

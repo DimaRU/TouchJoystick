@@ -11,7 +11,7 @@ protocol TouchJoystickViewDelegate: class {
 }
 
 @IBDesignable
-class TouchJoystickView: UIView {
+class TouchJoystickView: UIView, DisabledLayout {
     enum JoystickType {
         case horizontal
         case vertical
@@ -66,11 +66,11 @@ class TouchJoystickView: UIView {
         stickPosition = CGPoint(x: joystickBounds.midX, y: joystickBounds.midY)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func didMoveToWindow() {
+        guard window != nil else { return }
         setup()
     }
-
+    
     // MARK: draw
     override func draw(_ rect: CGRect) {
         if joystickType ~= .dualAxis {

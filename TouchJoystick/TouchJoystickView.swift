@@ -40,29 +40,9 @@ class TouchJoystickView: UIView {
     private var deadzone: CGFloat = 4
     private var joystickBounds: CGRect = .zero
 
-    // MARK: Setup
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    #if TARGET_INTERFACE_BUILDER
-    override func prepareForInterfaceBuilder() {
-        setup()
-    }
-    #endif
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-    }
-    
     func setup(joystick size: CGSize) {
         joystickSize = size
+        compactJoystickSize = size
         setup()
     }
 
@@ -70,7 +50,6 @@ class TouchJoystickView: UIView {
         var size = joystickSize
         if UIScreen.main.traitCollection.horizontalSizeClass == .compact ||
             UIScreen.main.traitCollection.verticalSizeClass == .compact {
-            print("compact")
             size = compactJoystickSize
         }
         if size == .zero {
@@ -87,6 +66,11 @@ class TouchJoystickView: UIView {
         stickPosition = CGPoint(x: joystickBounds.midX, y: joystickBounds.midY)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setup()
+    }
+
     // MARK: draw
     override func draw(_ rect: CGRect) {
         if joystickType ~= .dualAxis {

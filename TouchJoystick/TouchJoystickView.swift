@@ -26,6 +26,7 @@ class TouchJoystickView: UIView {
     @IBInspectable var shadowBlur: CGFloat = 12
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 7, height: 7)
     @IBInspectable var joystickSize: CGSize = .zero
+    @IBInspectable var compactJoystickSize: CGSize = .zero
 
     weak var delegate: TouchJoystickViewDelegate?
     private weak var startTouch: UITouch?
@@ -66,7 +67,15 @@ class TouchJoystickView: UIView {
     }
 
     private func setup() {
-        let size = joystickSize != .zero ? joystickSize : bounds.size
+        var size = joystickSize
+        if UIScreen.main.traitCollection.horizontalSizeClass == .compact ||
+            UIScreen.main.traitCollection.verticalSizeClass == .compact {
+            print("compact")
+            size = compactJoystickSize
+        }
+        if size == .zero {
+            size = bounds.size
+        }
         joystickBounds = CGRect(origin: CGPoint(x: bounds.midX - size.width/2, y: bounds.midY - size.height/2), size: size)
         if size.height == size.width {
             joystickType = .dualAxis

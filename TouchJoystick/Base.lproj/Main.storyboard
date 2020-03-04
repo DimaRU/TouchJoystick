@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16082.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,32 +12,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchJoystick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2ke-01-PhT" customClass="TouchJoystickView" customModule="TouchJoystick" customModuleProvider="target">
-                                <rect key="frame" x="412" y="94" width="290" height="290"/>
+                                <rect key="frame" x="554" y="418" width="320" height="320"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tilt Down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-bG-Rax">
-                                        <rect key="frame" x="116.66666666666663" y="7.3333333333333286" width="57" height="15.666666666666664"/>
+                                        <rect key="frame" x="131.5" y="2" width="57" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tilt up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1k-7K-b0n">
-                                        <rect key="frame" x="125.99999999999999" y="267.33333333333331" width="38.333333333333329" height="15.666666666666686"/>
+                                        <rect key="frame" x="140.5" y="302" width="39" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF4-gM-FYI">
-                                        <rect key="frame" x="3.3333333333333144" y="137.33333333333334" width="23.666666666666668" height="15.666666666666657"/>
+                                        <rect key="frame" x="-2" y="152" width="24" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-rh-Gz6">
-                                        <rect key="frame" x="259" y="137.33333333333334" width="32" height="15.666666666666657"/>
+                                        <rect key="frame" x="294" y="152" width="32" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -47,12 +47,22 @@
                                 <constraints>
                                     <constraint firstItem="k1k-7K-b0n" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" id="9a0-ZO-AJd"/>
                                     <constraint firstItem="GF4-gM-FYI" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" id="Lj1-uv-MwV"/>
-                                    <constraint firstItem="JOz-rh-Gz6" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" constant="130" id="M0C-Gw-ynE"/>
-                                    <constraint firstItem="tR8-bG-Rax" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" constant="-130" id="O1Q-GV-Cmv"/>
+                                    <constraint firstItem="JOz-rh-Gz6" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" constant="150" id="M0C-Gw-ynE">
+                                        <variation key="heightClass=compact" constant="130"/>
+                                    </constraint>
+                                    <constraint firstItem="tR8-bG-Rax" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" constant="-150" id="O1Q-GV-Cmv">
+                                        <variation key="heightClass=compact" constant="-130"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" secondItem="2ke-01-PhT" secondAttribute="height" multiplier="1:1" id="SBY-Cr-a2a"/>
-                                    <constraint firstItem="k1k-7K-b0n" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" constant="130" id="Vnw-6r-MDT"/>
-                                    <constraint firstItem="GF4-gM-FYI" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" constant="-130" id="fuZ-ey-V2K"/>
-                                    <constraint firstAttribute="height" constant="290" id="jXt-7k-rLG"/>
+                                    <constraint firstItem="k1k-7K-b0n" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" constant="150" id="Vnw-6r-MDT">
+                                        <variation key="heightClass=compact" constant="130"/>
+                                    </constraint>
+                                    <constraint firstItem="GF4-gM-FYI" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" constant="-150" id="fuZ-ey-V2K">
+                                        <variation key="heightClass=compact" constant="-130"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="320" id="jXt-7k-rLG">
+                                        <variation key="heightClass=compact" constant="290"/>
+                                    </constraint>
                                     <constraint firstItem="JOz-rh-Gz6" firstAttribute="centerY" secondItem="2ke-01-PhT" secondAttribute="centerY" id="nTL-OG-ft7"/>
                                     <constraint firstItem="tR8-bG-Rax" firstAttribute="centerX" secondItem="2ke-01-PhT" secondAttribute="centerX" id="vew-G6-BLC"/>
                                 </constraints>
@@ -73,21 +83,24 @@
                                         <size key="value" width="0.0" height="8"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="joystickSize">
+                                        <size key="value" width="250" height="250"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="compactJoystickSize">
                                         <size key="value" width="200" height="200"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-LZ-okH" customClass="TouchJoystickView" customModule="TouchJoystick" customModuleProvider="target">
-                                <rect key="frame" x="114" y="104" width="50" height="280"/>
+                                <rect key="frame" x="70" y="418" width="60" height="320"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forward" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX9-wz-19g">
-                                        <rect key="frame" x="0.3333333333333286" y="2.3333333333333277" width="49.666666666666664" height="15.666666666666664"/>
+                                        <rect key="frame" x="5" y="2" width="50" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-jQ-f1l">
-                                        <rect key="frame" x="10" y="262.33333333333331" width="30" height="15.666666666666686"/>
+                                        <rect key="frame" x="15" y="302" width="30" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -95,12 +108,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="0Ua-n0-yoz"/>
+                                    <constraint firstAttribute="width" constant="60" id="0Ua-n0-yoz">
+                                        <variation key="heightClass=compact" constant="50"/>
+                                    </constraint>
                                     <constraint firstItem="AX9-wz-19g" firstAttribute="centerX" secondItem="VNF-LZ-okH" secondAttribute="centerX" id="2n5-Ly-pZq"/>
                                     <constraint firstItem="2tl-jQ-f1l" firstAttribute="centerX" secondItem="VNF-LZ-okH" secondAttribute="centerX" id="VaP-bk-BHp"/>
-                                    <constraint firstItem="2tl-jQ-f1l" firstAttribute="centerY" secondItem="VNF-LZ-okH" secondAttribute="centerY" constant="130" id="dTm-TX-tim"/>
-                                    <constraint firstAttribute="height" constant="280" id="hqm-Ff-etU"/>
-                                    <constraint firstItem="AX9-wz-19g" firstAttribute="centerY" secondItem="VNF-LZ-okH" secondAttribute="centerY" constant="-130" id="n8v-Gc-zlW"/>
+                                    <constraint firstItem="2tl-jQ-f1l" firstAttribute="centerY" secondItem="VNF-LZ-okH" secondAttribute="centerY" constant="150" id="dTm-TX-tim">
+                                        <variation key="heightClass=compact" constant="130"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="320" id="hqm-Ff-etU">
+                                        <variation key="heightClass=compact" constant="290"/>
+                                    </constraint>
+                                    <constraint firstItem="AX9-wz-19g" firstAttribute="centerY" secondItem="VNF-LZ-okH" secondAttribute="centerY" constant="-150" id="n8v-Gc-zlW">
+                                        <variation key="heightClass=compact" constant="-130"/>
+                                    </constraint>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -119,12 +140,15 @@
                                         <size key="value" width="0.0" height="8"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="joystickSize">
+                                        <size key="value" width="60" height="250"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="compactJoystickSize">
                                         <size key="value" width="50" height="200"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hdN-Io-gHj" customClass="TouchJoystickView" customModule="TouchJoystick" customModuleProvider="target">
-                                <rect key="frame" x="594" y="20" width="200" height="50"/>
+                                <rect key="frame" x="550" y="20" width="200" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Jeh-j3-IY1"/>
@@ -171,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="138.8671875" y="93.75"/>
         </scene>
     </scenes>
 </document>

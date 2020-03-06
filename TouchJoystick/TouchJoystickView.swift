@@ -6,13 +6,13 @@
 import UIKit
 
 protocol TouchJoystickViewDelegate: class {
-    func joystickDidMove(_ joystickView: TouchJoystickView, to x: Float, y: Float)
-    func joystickEndMoving(_ joystickView: TouchJoystickView)
+    func joystickDidMove(_ joystickType: TouchJoystickView.JoystickType, to x: Float, y: Float)
+    func joystickEndMoving(_ joystickType: TouchJoystickView.JoystickType)
 }
 
 @IBDesignable
 class TouchJoystickView: UIView, DisabledLayout {
-    enum JoystickType {
+    enum JoystickType: String {
         case horizontal
         case vertical
         case dualAxis
@@ -155,7 +155,7 @@ class TouchJoystickView: UIView, DisabledLayout {
         startTouch = touch
         stickPosition = touch.location(in: self)
         setNeedsDisplay()
-        delegate?.joystickDidMove(self, to: 0, y: 0)
+        delegate?.joystickDidMove(joystickType, to: 0, y: 0)
         feedbackGenerator = .init(style: .light)
         feedbackGenerator?.prepare()
         lowXMark = true
@@ -275,7 +275,7 @@ class TouchJoystickView: UIView, DisabledLayout {
         
         if lastPosition != stickPosition {
             setNeedsDisplay()
-            delegate?.joystickDidMove(self, to: Float(xValue), y: Float(yValue))
+            delegate?.joystickDidMove(joystickType, to: Float(xValue), y: Float(yValue))
         }
     }
     
@@ -283,7 +283,7 @@ class TouchJoystickView: UIView, DisabledLayout {
         guard touch == startTouch else { return }
         isHidden = true
         feedbackGenerator = nil
-        delegate?.joystickEndMoving(self)
+        delegate?.joystickEndMoving(joystickType)
     }
     
 }

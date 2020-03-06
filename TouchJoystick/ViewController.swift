@@ -83,27 +83,12 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: TouchJoystickViewDelegate {
-    func joystickDidMove(_ joystickView: TouchJoystickView, to x: Float, y: Float) {
-        let joystickName: String
-        switch joystickView {
-        case throttleJoystick: joystickName = "throttle"
-        case yawJoystock: joystickName = "yaw"
-        case horizontalJoystock: joystickName = "horizontal"
-        default: fatalError()
-        }
-        
-        print("\(joystickName) joystick move to x:\(x) y:\(y)")
+    func joystickDidMove(_ joystickType: TouchJoystickView.JoystickType, to x: Float, y: Float) {
+        print("\(joystickType.rawValue) joystick move to x:\(x) y:\(y)")
     }
     
-    func joystickEndMoving(_ joystickView: TouchJoystickView) {
-        let joystickName: String
-        switch joystickView {
-        case throttleJoystick: joystickName = "throttle"
-        case yawJoystock: joystickName = "yaw"
-        case horizontalJoystock: joystickName = "horizontal"
-        default: fatalError()
-        }
-        print("\(joystickName) joystick did end moving")
+    func joystickEndMoving(_ joystickType: TouchJoystickView.JoystickType) {
+        print("\(joystickType.rawValue) joystick did end moving")
     }
 }
 
